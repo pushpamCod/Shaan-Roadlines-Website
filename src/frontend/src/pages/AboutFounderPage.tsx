@@ -70,7 +70,7 @@ export default function AboutFounderPage() {
             className="flex justify-center"
           >
             <img
-              src="/src/pages/founder.png"
+              src="/founder.png"
               alt="Shaan, Founder of Shaan Roadlines"
               className="w-64 h-64 rounded-2xl object-cover object-top"
             />
