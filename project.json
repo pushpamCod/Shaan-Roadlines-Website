@@ -1,0 +1,28 @@
+{
+  "overview": "TravelEase is a premium full-stack travel booking platform inspired by RedBus, MakeMyTrip, and Booking.com. It supports bus, train, flight, and hotel booking with interactive seat/room selection, a user dashboard, fully functional admin panel, AI travel assistant, free food service, and a luxury About Founder page.",
+  "features": [
+    "Bus, Train, Flight, and Hotel booking with interactive seat/room selection",
+    "User authentication with Internet Identity and profile management",
+    "Free Food Service with eligibility detection and meal selection",
+    "Simulated payment checkout with multiple methods and transaction history",
+    "User dashboard with bookings, saved travelers, wishlist, loyalty points, and referral codes",
+    "Fully functional admin panel with analytics charts, CRUD management, and coupon system",
+    "AI travel assistant chatbot powered by OpenAI with admin-set API key",
+    "About Founder luxury page with glassmorphism, animated timeline, and image placeholders",
+    "Dark/light mode, skeleton loaders, toast notifications, and smooth animations throughout"
+  ],
+  "category": "travel-booking",
+  "tags": [
+    "travel",
+    "booking",
+    "bus",
+    "train",
+    "flight",
+    "hotel",
+    "admin",
+    "ai-chatbot",
+    "payments",
+    "dashboard"
+  ],
+  "last_updated": "2026-05-17T07:18:32.868Z"
+}

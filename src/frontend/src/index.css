@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/fonts/SpaceGrotesk.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Space Grotesk", sans-serif;
+    --font-body: "General Sans", sans-serif;
+    --font-mono: "Geist Mono", monospace;
+    --radius: 0.75rem;
+
+    /* Light mode — crisp sky-blue travel palette */
+    --background: 0.97 0.008 230;
+    --foreground: 0.14 0.018 240;
+    --card: 1.0 0.003 230;
+    --card-foreground: 0.14 0.018 240;
+    --popover: 1.0 0.003 230;
+    --popover-foreground: 0.14 0.018 240;
+
+    --primary: 0.52 0.19 240;
+    --primary-foreground: 0.98 0.005 240;
+
+    --secondary: 0.94 0.015 230;
+    --secondary-foreground: 0.22 0.018 240;
+    --muted: 0.93 0.012 225;
+    --muted-foreground: 0.48 0.015 230;
+
+    --accent: 0.72 0.16 75;
+    --accent-foreground: 0.14 0.018 75;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0.005 25;
+
+    --border: 0.88 0.012 230;
+    --input: 0.9 0.01 230;
+    --ring: 0.52 0.19 240;
+
+    --chart-1: 0.52 0.19 240;
+    --chart-2: 0.62 0.16 170;
+    --chart-3: 0.72 0.16 75;
+    --chart-4: 0.55 0.22 25;
+    --chart-5: 0.65 0.18 290;
+
+    --sidebar: 0.97 0.008 230;
+    --sidebar-foreground: 0.14 0.018 240;
+    --sidebar-primary: 0.52 0.19 240;
+    --sidebar-primary-foreground: 0.98 0.005 240;
+    --sidebar-accent: 0.93 0.012 225;
+    --sidebar-accent-foreground: 0.22 0.018 240;
+    --sidebar-border: 0.88 0.012 230;
+    --sidebar-ring: 0.52 0.19 240;
+  }
+
+  .dark {
+    /* Dark mode — deep navy premium travel */
+    --background: 0.13 0.022 255;
+    --foreground: 0.94 0.01 240;
+    --card: 0.17 0.025 255;
+    --card-foreground: 0.94 0.01 240;
+    --popover: 0.2 0.025 255;
+    --popover-foreground: 0.94 0.01 240;
+
+    --primary: 0.68 0.18 200;
+    --primary-foreground: 0.13 0.022 255;
+
+    --secondary: 0.22 0.03 255;
+    --secondary-foreground: 0.84 0.01 240;
+    --muted: 0.22 0.03 255;
+    --muted-foreground: 0.54 0.015 245;
+
+    --accent: 0.75 0.17 75;
+    --accent-foreground: 0.13 0.022 75;
+
+    --destructive: 0.6 0.22 25;
+    --destructive-foreground: 0.94 0.01 25;
+
+    --border: 0.26 0.03 255;
+    --input: 0.28 0.03 255;
+    --ring: 0.68 0.18 200;
+
+    --chart-1: 0.68 0.18 200;
+    --chart-2: 0.65 0.16 170;
+    --chart-3: 0.75 0.17 75;
+    --chart-4: 0.6 0.22 25;
+    --chart-5: 0.62 0.2 290;
+
+    --sidebar: 0.17 0.025 255;
+    --sidebar-foreground: 0.94 0.01 240;
+    --sidebar-primary: 0.68 0.18 200;
+    --sidebar-primary-foreground: 0.13 0.022 255;
+    --sidebar-accent: 0.22 0.03 255;
+    --sidebar-accent-foreground: 0.84 0.01 240;
+    --sidebar-border: 0.26 0.03 255;
+    --sidebar-ring: 0.68 0.18 200;
+  }
+
+  * {
+    @apply border-border;
+  }
+  html {
+    color-scheme: dark light;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Glassmorphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  /* Gradients */
+  .gradient-hero {
+    background: linear-gradient(
+      135deg,
+      #0a1628 0%,
+      #0f2447 40%,
+      #0c3460 70%,
+      #0ea5e9 100%
+    );
+  }
+  .gradient-card {
+    background: linear-gradient(
+      135deg,
+      rgba(14, 165, 233, 0.08),
+      rgba(245, 158, 11, 0.04)
+    );
+  }
+  .gradient-teal {
+    background: linear-gradient(
+      135deg,
+      oklch(0.52 0.19 240),
+      oklch(0.62 0.18 195)
+    );
+  }
+  .gradient-amber {
+    background: linear-gradient(
+      135deg,
+      oklch(0.72 0.16 75),
+      oklch(0.78 0.18 65)
+    );
+  }
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.68 0.18 200),
+      oklch(0.75 0.17 75)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Skeleton loader */
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      oklch(var(--muted) / 0.8) 25%,
+      oklch(var(--muted) / 0.4) 50%,
+      oklch(var(--muted) / 0.8) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  /* Section alternation */
+  .section-alt {
+    @apply bg-muted/30;
+  }
+
+  /* Card hover lift */
+  .card-hover {
+    @apply transition-smooth hover:-translate-y-1 hover:shadow-elevated;
+  }
+
+  /* Status colors */
+  .status-confirmed {
+    color: oklch(0.6 0.18 150);
+  }
+  .status-pending {
+    color: oklch(0.72 0.16 82);
+  }
+  .status-cancelled {
+    color: oklch(0.6 0.22 25);
+  }
+  .status-completed {
+    color: oklch(0.65 0.16 230);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(14, 165, 233, 0.6);
+  }
+}
