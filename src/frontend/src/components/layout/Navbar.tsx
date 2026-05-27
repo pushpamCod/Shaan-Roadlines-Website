@@ -16,6 +16,7 @@ import {
   Bus,
   ChevronDown,
   Hotel,
+  Info,
   LogOut,
   Menu,
   Moon,
@@ -35,6 +36,7 @@ const navLinks = [
   { href: "/train", label: "Trains", icon: TrainFront },
   { href: "/flight", label: "Flights", icon: Plane },
   { href: "/hotel", label: "Hotels", icon: Hotel },
+  { href: "/about-founder", label: "About", icon: Info },
 ];
 
 export function Navbar() {
@@ -96,18 +98,6 @@ export function Navbar() {
                 {label}
               </Link>
             ))}
-            <Link
-              to="/about-founder"
-              data-ocid="navbar.about_link"
-              className={cn(
-                "px-3 py-2 rounded-lg text-sm font-medium transition-smooth",
-                isActive("/about-founder")
-                  ? "bg-primary/15 text-primary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted/50",
-              )}
-            >
-              About
-            </Link>
           </nav>
 
           {/* Right actions */}
