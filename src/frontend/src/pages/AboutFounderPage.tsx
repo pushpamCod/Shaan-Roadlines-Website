@@ -80,7 +80,7 @@ export default function AboutFounderPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold mb-2">Shaan</h2>
+            <h2 className="text-3xl font-bold mb-2">Subhojit Goswami</h2>
             <p className="text-teal-500 font-semibold mb-4">
               Founder & CEO, Shaan Roadlines
             </p>
